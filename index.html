@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEFAN WEBDESIGN | Professionelle Websites & Digitale Lösungen</title>
+    <style>
+        :root {
+            --bg-main: #f8f9fa; /* Edles, helles Grau-Weiß */
+            --bg-card: #ffffff; /* Reines Weiß für Karten */
+            --accent-gold: #c5a059; /* Softes Gold für Akzente */
+            --text-dark: #212529; /* Dunkles Anthrazit für perfekte Lesbarkeit */
+            --text-muted: #6c757d; /* Abgetöntes Grau für Nebentexte */
+            --border-color: #e9ecef; /* Sehr feine, helle Trennlinien */
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--text-dark);
+        }
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-main) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin: 0;
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 20px 0 35px 0;
+            font-weight: 600;
+        }
+
+        /* Container & Grid */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 60px;
+            position: relative;
+            font-weight: 600;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 45px 35px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.08);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin: 0;
+            font-size: 0.98rem;
+        }
+
+        /* Call To Action Section */
+        .cta-section {
+            text-align: center;
+            padding: 90px 20px;
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--text-dark);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-gold);
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(197, 160, 89, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">STEFAN<span>WEBDESIGN</span></div>
+    </nav>
+
+    <div class="hero">
+        <h1>Exklusive Webauftritte für Ihr Unternehmen</h1>
+        <p>Ästhetisch. Durchdacht. Zukunftssicher.</p>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Leistungsportfolio</h2>
+        
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h3>Unternehmensseiten</h3>
+                <p>Konzeption und Umsetzung von modernen Firmenwebseiten, die neue Kunden anziehen und Ihre Marke perfekt im Internet präsentieren.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="card">
+                <div class="card-icon">✨</div>
+                <h3>Premium Redesign</h3>
+                <p>Ich verpasse veralteten Webseiten einen frischen, eleganten und zeitgemäßen Look – natürlich optimiert für alle Smartphones.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h3>Wartung & Support</h3>
+                <p>Zuverlässige Pflege, damit Ihre Seite technisch auf dem neuesten Stand bleibt, während Sie sich ganz auf Ihr Business konzentrieren.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Bereit für den digitalen Schritt?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 35px; font-size: 1.1rem;">Lassen Sie uns gemeinsam eine Webpräsenz erschaffen, die aus der Masse heraussticht.</p>
+        <a href="mailto:deine-email@beispiel.com" class="btn">Kostenlose Anfrage starten</a>
+    </div>
+
+    <footer>
+        &copy; 2026 STEFAN WEBDESIGN. Alle Rechte vorbehalten.
+    </footer>
+
+</body>
+</html>
