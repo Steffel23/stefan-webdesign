@@ -130,7 +130,6 @@
             font-size: 0.98rem;
         }
 
-        /* --- NEU: Preise & Angebote Grid --- */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -147,6 +146,9 @@
             position: relative;
             box-shadow: 0 4px 12px rgba(0,0,0,0.02);
             transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .price-card:hover {
@@ -195,7 +197,7 @@
         .price-features {
             list-style: none;
             padding: 0;
-            margin: 30px 0;
+            margin: 20px 0 30px 0;
             text-align: left;
         }
 
@@ -214,7 +216,6 @@
             font-weight: bold;
         }
 
-        /* Call To Action Section */
         .cta-section {
             text-align: center;
             padding: 90px 20px;
@@ -228,28 +229,23 @@
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--text-dark);
-            color: #ffffff;
+            display: block;
+            padding: 14px 0;
+            background-color: transparent;
+            border: 1px solid var(--text-dark);
+            color: var(--text-dark);
             text-decoration: none;
             border-radius: 6px;
             font-size: 0.95rem;
             letter-spacing: 0.5px;
             font-weight: 600;
             transition: all 0.25s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            width: 80%;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: auto;
         }
 
-        .price-card .btn {
-            background-color: transparent;
-            border: 1px solid var(--text-dark);
-            color: var(--text-dark);
-            box-shadow: none;
-        }
-
-        .price-card .btn:hover {
+        .btn:hover {
             background-color: var(--text-dark);
             color: white;
         }
@@ -266,8 +262,12 @@
         }
 
         .cta-section .btn {
+            display: inline-block;
             width: auto;
             padding: 15px 40px;
+            background-color: var(--text-dark);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .cta-section .btn:hover {
@@ -320,18 +320,19 @@
             </div>
         </div>
 
-        <!-- --- NEU: Preise & Pakete Sektion --- -->
         <h2 class="section-title" style="margin-top: 80px;">Angebote & Pakete</h2>
         
         <div class="pricing-grid">
             <!-- Paket 1 -->
             <div class="price-card">
-                <h3 class="price-title">Web-Visitenkarte</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">Ideal für Handwerker & lokale Betriebe</p>
-                <div class="price-amount">499 €</div>
-                <ul class="price-features">
-                    <li>Moderne Startseite (One-Page)</li>
-                    <li>Kontaktformular & Anfahrt</li>
-                    <li>Responsive Design (Mobilfreundlich)</li>
-                    <li>Rechtssicheres Impressum & DSGVO</li>
-                </ul>
+                <div>
+                    <h3 class="price-title">Web-Visitenkarte</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Ideal für Handwerker & lokale Betriebe</p>
+                    <div class="price-amount">499 €</div>
+                    <ul class="price-features">
+                        <li>Moderne Startseite (One-Page)</li>
+                        <li>Kontaktformular & Anfahrt</li>
+                        <li>Responsive Design (Mobilfreundlich)</li>
+                        <li>Rechtssicheres Impressum & DSGVO</li>
+                    </ul>
+                </div>
